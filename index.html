@@ -700,13 +700,11 @@
           recommendedNameGroup.classList.add('hidden');
           recommendedPhoneGroup.classList.add('hidden');
         } finally {
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Submitting...';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Application';
           form.classList.add('disabled');
 
           const disableTimeout = setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit Application';
             form.classList.remove('disabled');
           }, 60000);
         }
